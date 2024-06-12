@@ -342,7 +342,7 @@ impl Capture {
         let mapped_pixels =
             unsafe { slice::from_raw_parts_mut(mapped_surface.pBits as *mut T, byte_size(stride) * height) };
 
-        Ok((mapped_pixels, (width, height)))
+        Ok((mapped_pixels, (width, height),))
     }
 }
 
