@@ -39,7 +39,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         counter += 1;
         if timer.elapsed() >= Duration::from_secs(1) {
-            window.!set_title(&format!("Capture - FPS: {}", counter))?;
+            println!("Capture - FPS: {}", counter);
             counter = 0;
             timer = Instant::now();
         }
